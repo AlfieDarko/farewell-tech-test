@@ -98,15 +98,15 @@ const quotes = [
       "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FSeymourSkinner.png?1497567511460",
     characterDirection: "Right",
   },
-];
+]
 
 const fetchQuotes = () => {
   return new Promise((resolve) =>
     setTimeout(() => {
-      const selectedQuotes = quotes.sort(() => 0.5 - Math.random()).slice(0, 4);
-      resolve({ data: selectedQuotes });
-    }, 300)
-  );
-};
+      const selectedQuotes = quotes.sort(() => 0.5 - Math.random()).slice(0, 4)
+      resolve({ data: selectedQuotes })
+    }, 3000)
+  )
+}
 
-export default fetchQuotes;
+export default fetchQuotes
