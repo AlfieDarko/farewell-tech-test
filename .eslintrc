@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": 0,
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false
+      }
+    ]
+  }
+}
