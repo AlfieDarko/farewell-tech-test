@@ -1,9 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import { COLOR, BORDER, FONT, SPACING } from "../../constants"
 
-import { COLOR, BORDER, FONT, SPACING } from "../constants";
-
-const StyledButton = styled.button`
+export const Button = styled(motion.button)`
   padding: ${SPACING.XS} ${SPACING.M};
   cursor: pointer;
   outline: 0;
@@ -15,6 +14,7 @@ const StyledButton = styled.button`
   font-size: ${FONT.SIZE.M};
   text-decoration: none;
   min-width: 8em;
+  max-height: 2em;
 
   &:hover {
     text-decoration: none;
@@ -32,10 +32,10 @@ const StyledButton = styled.button`
     pointer-events: none;
     user-select: none;
   }
-`;
+`
 
-const Button = props => {
-  return <StyledButton {...props} />;
-};
-
-export default Button;
+export const HomerSpinner = styled(motion.img)`
+  height: 4em;
+  position: relative;
+  top: -${SPACING.M};
+`
