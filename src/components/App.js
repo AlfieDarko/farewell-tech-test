@@ -1,26 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-
-import Button from "./Button";
-import Header from "./Header";
-import { CONTENT_WIDTH, SPACING } from "../constants";
-
-const StyledContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: ${CONTENT_WIDTH};
-  padding: ${SPACING.L};
-`;
+import React from "react"
+import Header from "./Header/index"
+import QuotesGrid from "./QuotesGrid"
+import * as Styled from "./App.styled"
 
 const App = () => {
   return (
     <>
-      <Header />
-
-      <StyledContentWrapper>
-        <Button>Load quotes</Button>
-      </StyledContentWrapper>
+      <Header dataTestId="header" />
+      <Styled.ContentWrapper data-testid="content-wrapper">
+        <QuotesGrid />
+      </Styled.ContentWrapper>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
